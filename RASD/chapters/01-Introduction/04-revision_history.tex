@@ -1,0 +1,24 @@
+\documentclass[../../main.tex]{subfiles}
+
+\begin{document}
+
+\newcounter{VersionCounter}
+
+\stepcounter{VersionCounter}
+{\rowcolors{2}{white}{lightgray}
+\begin{table}[h!]
+    % Centers the table
+    \centering
+    \begin{tabular}{| c | c | p{12cm} |}
+    \hline
+    % textbf used to achieve bold font
+    \textbf{Version} & \textbf{Date} & \textbf{Notes} \\ \hline\hline
+    V\arabic{VersionCounter}.0 & December 10, 2021 & Initial release.\\ 
+    V\arabic{VersionCounter}.1 & December 23, 2021 & Some corrections to UML diagrams.\\ 
+    \hline
+    \end{tabular}
+    \label{goals}
+\end{table}
+}
+
+\end{document}

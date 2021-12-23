@@ -1,0 +1,44 @@
+\documentclass[../../main.tex]{subfiles}
+
+\begin{document}
+
+	\subsection{Reliability}
+
+	The system should be nice and robust, and its structure should take into account the possible damage of system components (temperature and humidity sensors, etc.) by providing readily replaceable accessories.
+
+    The implementation of the storage system should also take into account backups in order to recover from eventual data loss.
+
+	\subsection{Availability}
+
+	Farmers may initiate requests for help and discussions at any time, so the system must have a fairly high level of reliability. Sensor-application interaction requires transmission over the network, requiring transmission with appreciable stability.
+
+	\subsection{Security}
+
+	All data inbound to DREAM services must be treated as stated by GDPR regulations. 
+
+	All personnel (i.e., Policy makers, Farmers and agronomists) will authenticate to the system using Single Sign On (SSO) integrations with the stores identity systems, using either OAuth or SAML. This will allow the system to delegate the user management to external identity systems, with the benefits of:
+	\begin{itemize}
+		\item not having to deal with sensitive information (e.g., passwords) .\\
+		\item inheriting the change of permissions of the users. \\
+		\item providing the users with a unified and smooth log in experience.
+	\end{itemize}
+
+	Additionally, to guarantee the protection of the customer's data in between servers and the 
+	user's device, all Internet traffic must be encrypted with a modern version of TLS, and sent via HTTPS protocol.
+
+	Finally, to guarantee data protection in the backend side, data at rest encryption needs to be used: this way the system should be protected 
+	from data breaches and thefts.
+
+	\subsection{Maintainability}
+
+	Maintainability should be an issue from the very beginning of the development process. The system should strive to make the process of adapting, improving, and adding as simple as possible, and to allow easy migration to different environments.
+	A basic rule for ensuring maintainability is to avoid using any form of deprecated software or hardware in order to keep the system scalable.
+	In order to meet these requirements, additional appropriate design patterns must be used, but their description is beyond the purpose of this document, so they will be described in a separate document.
+
+	\subsection{Portability}
+	Portability means creating a program executable that can be used in different environments without major retooling of the developed software.
+	Since DREAM can be used both as a web application and as a mobile application, it is important to separate the logic and the interface of the software from the beginning of development to ensure portability.
+	In order to meet this requirement, a suitable development environment must be selected. A framework to ensure portability is outlined for each part of the system.
+
+	
+\end{document}

@@ -1,0 +1,53 @@
+\documentclass[../../main.tex]{subfiles}
+
+\begin{document}
+
+\newcounter{dacounter}
+
+\subsection{Domain assumptions}
+
+{\rowcolors{2}{white}{lightgray}
+\begin{table}[H]
+    % Centers the table
+    \centering
+    \begin{tabular}{| c | p{12cm} |}
+    \hline
+    % textbf used to achieve bold font
+    \textbf{ID}                    & \textbf{Domain assumption} \\ \hline\hline
+
+
+
+    \stepcounter{dacounter} D\thedacounter          & The number of policy makers is sufficient to identify and reward all farmers who rank high. \\ 
+
+    \stepcounter{dacounter} D\thedacounter          & Policy makers will help every farmer who asks for help. \\
+
+    \stepcounter{dacounter} D\thedacounter          & All farmers are truthful and regularly upload their production. \\ % check phrasing
+
+    \stepcounter{dacounter} D\thedacounter          & All farmers will allow the software to access farm location information. \\
+
+    \stepcounter{dacounter} D\thedacounter          & Farmers will answer questions they know in the forum. \\
+
+    \stepcounter{dacounter} D\thedacounter          & Agronomists will provide adequate help to farmers who need it. \\
+    
+    \stepcounter{dacounter} D\thedacounter          & All DREAM users have an IT device with support for Internet connectivity or a standard telephone line. \\
+
+
+    \hline
+    \end{tabular}
+    \label{domain assumptions}
+\end{table}
+}
+
+\subsection{Constraints}
+
+In order to improve the ease of use of the system, all users will not authenticate to the system. For all the functionalities that require to know the identity of the users, the system will use:
+
+
+\begin{itemize}
+    \item when users access the system with an IT device, a device identifier that the system generates and binds to the device itself
+    \item when users access the system with a standard telephone line, the caller identifier of the telephone line (telephone number)
+\end{itemize}
+
+For the authentication of policy makers, instead, the system will integrate with identity systems.
+
+\end{document}
