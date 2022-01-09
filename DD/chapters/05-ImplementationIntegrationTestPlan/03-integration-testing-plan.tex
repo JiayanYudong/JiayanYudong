@@ -1,0 +1,94 @@
+\documentclass[../../main.tex]{subfiles}
+
+\begin{document}
+
+\subsection{Overview}
+
+A component should be unit tested as soon as it is implemented; if necessary, a driver can be used in place of components that are not yet completely built. As a result of selecting a bottom-up method in the implementation phase, we should also select a bottom-up strategy for integration and testing. After a component's unit tests pass, it is integrated into the system and integration testing is performed: every interface that the component utilizes is tested. Due to the usage of a bottom-up method, this process concludes when the components at the top of the hierarchy are incorporated into the system. At that time, system tests may be used to test the entire system.
+
+\subsection{Plan}
+
+\begin{enumerate}
+
+	\noindent\begin{minipage}{0.9\textwidth}
+
+	\item At first, the DBMS API has to be tested, in order to check for misconfiguration and correctness of the interface.
+
+	\begin{figure}[H]
+    \centering
+    \includegraphics[width=8cm]{1.jpg}
+	\end{figure}
+
+	\end{minipage}
+
+	\noindent\begin{minipage}{0.9\textwidth}
+		
+	\item  Then, the implementation goes on for Farmer, Policy Maker and Agronomists: 
+	
+	\begin{figure}[H]
+    \centering
+    \includegraphics[width=15cm]{2.jpg}
+	\end{figure}
+
+	\end{minipage}
+
+	\noindent\begin{minipage}{0.9\textwidth}
+	
+	\item Then, Requests, Registration and Information components  are  integrated and tested.
+	
+	\begin{figure}[H]
+    \centering
+    \includegraphics[width=15cm]{3.jpg}
+	\end{figure}
+
+	\end{minipage}
+
+	\noindent\begin{minipage}{0.9\textwidth}
+	
+	\item Later, the implementation of Results, Daily plan and its integration with Suggestion Service can begin. 
+
+	\begin{figure}[H]
+    \centering
+    \includegraphics[width=15cm]{4.jpg}
+	\end{figure}
+
+	\end{minipage}
+
+	\noindent\begin{minipage}{0.9\textwidth}
+		
+	\item Later, the implementation of the connection with web server will begin. 
+
+	\begin{figure}[H]
+    \centering
+    \includegraphics[width=15cm]{5.jpg}
+	\end{figure}
+
+	\end{minipage}
+
+	\noindent\begin{minipage}{0.9\textwidth}
+		
+	\item Then,  after  the  deployment  of  the  Web  Server  component,  its  integration  in  the  whole  system  is tested.
+
+	\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{6.jpg}
+	\end{figure}
+
+	\end{minipage}
+
+	\noindent\begin{minipage}{0.9\textwidth}
+		
+	\item 7. Finally the interface view and controller components services will integrated and tested.
+
+	\begin{figure}[H]
+    \centering
+    \includegraphics[width=12cm]{7.jpg}
+	\end{figure}
+
+	\end{minipage}
+
+\end{enumerate}
+
+\end{document}
+
+%

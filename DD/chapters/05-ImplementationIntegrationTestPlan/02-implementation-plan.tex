@@ -1,0 +1,27 @@
+\documentclass[../../main.tex]{subfiles}
+
+\begin{document}
+
+The complete system, as well as its related sub-systems, must be implemented, tested, and integrated from the ground up. With this method, the system may be built incrementally, allowing testing to begin concurrently with construction. Because the components are built, tested, and validated in a hierarchical manner, from bottom to top level, this technique provides more robustness.
+The implementation is done in a hierarchical order, starting with the bottom-most components, which have a closer interface with the database, and progressing to the upper-most components, which are farther away from the back end components and may rely on others. This ensures that the system may be constructed incrementally, and that the testing and integration process can begin concurrently with the implementation, allowing for better bug tracking, which leads to higher quality. Consequently,  the  components  should  be  implemented following this order:
+
+
+\begin{enumerate}
+
+	\item Farmer
+	\item Policy maker
+	\item Agronomists
+	\item Information
+	\item Registration
+	\item Requests
+	\item Results
+	\item Daily plan
+	\item Suggestion
+
+\end{enumerate}
+
+The client-side components of the application may be implemented concurrently with the rest of the system by developers. The user interface, in particular, is independent of the web server APIs, and designers and developers may create prototypes and mocks and implement them as quickly as feasible, validating and testing them. When the back end is ready, it will be feasible to connect its API calls to the clients.
+
+\end{document}
+
+

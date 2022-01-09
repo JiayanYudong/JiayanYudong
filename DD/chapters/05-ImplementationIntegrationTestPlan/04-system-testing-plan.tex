@@ -1,0 +1,23 @@
+\documentclass[../../main.tex]{subfiles}
+
+\begin{document}
+
+When the system is finished, it must be tested as a whole to ensure that all functional and non-functional criteria, as well as software system characteristics and performance requirements, are met:
+
+
+\begin{itemize}
+
+	\item \textbf{Load testing}: This test enables you to learn how a system responds under predicted demand. In this scenario, we anticipate that the system will operate without any performance issues until it reaches its full capacity. The purpose of this test is to see if DREAM's responsiveness can be maintained even at the given maximum capacity settings.
+
+	\item \textbf{Stress testing}: These tests aid in understanding the top limits of a system's capacity by simulating a load that is greater than the projected maximum. The purpose of this test is to determine whether the top limits of DREAM's system exceed the maximum capacity specified in RASD.
+
+	\item \textbf{Performance testing}: This test is used to examine how a system performs in terms of responsiveness and stability under a specific workload. The purpose of performance testing in our context is to check and verify the system's quality qualities, such as scalability, dependability, and resource utilisation. This test demonstrates that it is also useful for evaluating cloud platform expenses, as they are closely tied to resource utilisation. As a result of the data obtained during the testing process, we can evaluate and even anticipate the costs associated with cloud platforms.
+	
+	It is useful to have monitoring implemented during runtime to ensure that the system is performing as planned. Monitoring should consider both infrastructure-scoped statistics and application-scoped information. Because DREAM relies on cloud platforms to host its services, infrastructure-scoped statistics may make use of data supplied by the cloud platforms in use.
+    Before releasing any feature or modification to the production environment, all updates are deployed in a staging environment that is as close to the production environment as feasible. After the core DREAM functionalities and those impacted by the upgrade have been validated to work properly, they are propagated to the production environment. 
+
+
+\end{itemize} 
+
+\end{document}
+

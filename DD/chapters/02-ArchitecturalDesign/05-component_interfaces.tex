@@ -1,0 +1,85 @@
+\documentclass[../../main.tex]{subfiles}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
+\begin{document}
+
+\begin{lstlisting}
+// Components
+
+public interface Registeration {
+  void uploadInformation(Object personalInformation);
+}
+
+public interface Discussion {
+  void createDiscussion(int personalId, int numberOfPeople);
+}
+
+public interface AskQuestion {
+  void createDiscussion(int personalId, Object question);
+}
+
+public interface requestRanking {
+  Map<Object, id> selectRankOfFarmer(int personalId, int cropProduciton);
+}
+
+public interface searchQuestion {
+  Collection<Object> selectQuestion(int questionId);
+}
+
+public interface requestWeather {
+  void selectWeather(string location);
+}
+
+// DBMS
+
+public interface DBMSAPI {
+  void deleteInformation(int personalId);
+  void deleteQuestion(int questiontId);
+  void insertQuestion(int personalId, int quesiton);
+  void uploadInformation(Object personalInformation);
+  void createDiscussion(int personalId, int numberOfPeople);
+  void createDiscussion(int personalId, Object question);
+  void selectWeather(string location);
+  Map<Object, id> selectRankOfFarmer(int personalId, int cropProduciton);
+  Collection<Object> selectQuestion(int questionId);
+  Collection<Object> selectVisits(int areaId);
+  void updateList(int personalId);
+}
+
+// External services
+
+public interface VerificationAPI {
+  boolean checkToken(String token);
+}
+
+public interface WeatherAPI {
+  String getWeather(Object Area);
+}
+
+public interface SensorAPI {
+  double humidityInformation(Location devicePosition);
+}
+
+\end{lstlisting}
+
+\end{document}
